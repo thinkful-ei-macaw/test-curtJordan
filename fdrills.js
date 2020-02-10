@@ -10,4 +10,12 @@ function createGreeting(name, age){
 const greeting1 = createGreeting();
 console.log(greeting1);
 
+function getYearOfBirth (age) {
+    return yearOfBirth;
+}
+
+function creatGreeting(name, age) {
+    const yearOfBirth = 16 - age;
+}
+
 
