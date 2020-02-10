@@ -11,11 +11,16 @@ const greeting1 = createGreeting();
 console.log(greeting1);
 
 function getYearOfBirth (age) {
+    if (age < 0) {
+        throw new Error("age cannot be nevative")
+    }
     return yearOfBirth;
 }
 
 function creatGreeting(name, age) {
     const yearOfBirth = 16 - age;
 }
+
+
 
 
