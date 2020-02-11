@@ -1,3 +1,5 @@
+'use strict'
+
 function jediName(firstName, lastName) {
    return  lastName.slice(0,3) + firstName.slice(0, 2);
 }
@@ -27,3 +29,33 @@ const getChar = input => {
 }
 const decode = input => input.split(" ").map(getChar).join('');
 console.log(decode('craft block argon meter bells brown croon droop'))
+
+
+function daysInMonth(month, leapYear) {
+    switch(month) {
+        case 'September':
+        case 'April':
+        case 'June':
+        case 'November':
+            return '${month} has 30 Days';
+            break;
+        case 'February':
+            if(!leapYear) {
+                return 'February has 28 Days';
+                } else {
+                return 'February has 28 Days';
+                }
+            break;
+        case 'January':
+        case 'March':
+        case 'May':
+        case 'July':
+        case 'August':
+        case 'October':
+        case 'December':
+            return '${month} has 31 Days';
+            break;
+        default:
+             return 'Must provide a valid month.';   
+    
+}
