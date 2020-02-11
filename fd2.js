@@ -59,3 +59,16 @@ function daysInMonth(month, leapYear) {
              return 'Must provide a valid month.';   
     
 }
+
+function rokPepSizz = num => {
+    if ( num < 0 || num > 3) {
+        throw 'You must choose ROCK! PAPER! or SCISSORS!';
+    }
+    try (num === 1 || num === 2 || num === 3) {
+        const cpu = Math.floor(Math.random() * 3) + 1;
+        if (num === cpu) {
+            console.log('It  is a tie!')
+        } else if (num === 1 && cpu ===2 )
+    } catch (e) {
+        console.log(e);
+    }
