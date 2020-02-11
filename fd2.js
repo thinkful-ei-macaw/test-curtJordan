@@ -43,7 +43,7 @@ function daysInMonth(month, leapYear) {
             if(!leapYear) {
                 return 'February has 28 Days';
                 } else {
-                return 'February has 28 Days';
+                return 'February has 29 Days';
                 }
             break;
         case 'January':
