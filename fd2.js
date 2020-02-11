@@ -60,15 +60,36 @@ function daysInMonth(month, leapYear) {
     
 }
 
-function rokPepSizz = num => {
-    if ( num < 0 || num > 3) {
-        throw 'You must choose ROCK! PAPER! or SCISSORS!';
-    }
-    try (num === 1 || num === 2 || num === 3) {
-        const cpu = Math.floor(Math.random() * 3) + 1;
+function rockPaperScissor = num => {
+    const cpu = Math.floor(Math.random() * 3) + 1;
+
         if (num === cpu) {
-            console.log('It  is a tie!')
-        } else if (num === 1 && cpu ===2 )
-    } catch (e) {
-        console.log(e);
-    }
+            console.log('It  is a tie!');
+        }
+        try ( num < 0 || num > 3) {
+            throw new Error 'You must choose ROCK! PAPER! or SCISSORS!';
+        } catch (e) {
+            console.error(e.message);
+        }
+
+        if (num === 1) {
+            if (cpu ===2 ){
+                console.log('Paper covers Rock! YOU LOSE.');
+        } else if (cpu ===3) {
+            console.log('Rock beats Scissors. YOU Win.');
+        }
+
+        if (num === 2) {
+            if (cpu === 1){
+                console.log('Paper covers Rock! YOU Win.');
+        } else if (cpu === 3) {
+            console.log('Scissors cut Paper. YOU LOSE.');
+        }
+
+        if (num === 3) {
+            if (cpu ===2 ){
+                console.log('Scissors cut Paper. You Win.');
+        } else if (cpu ===3) {
+            console.log('Rock beats Scissors. YOU LOSE.');
+        }
+} 
